@@ -3,4 +3,5 @@ Role sebagai admin
 Username : bps1810
 Password : admin
 
+Rename file env menjadi .env
 Nama database : db_bps

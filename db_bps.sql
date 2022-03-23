@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2022 at 08:47 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 7.4.27
+-- Generation Time: Mar 23, 2022 at 09:55 AM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -925,6 +925,34 @@ ALTER TABLE `tb_kegiatan`
 --
 ALTER TABLE `tb_nilai`
   ADD PRIMARY KEY (`id_nilai`);
+
+--
+-- Indexes for table `tb_petugas`
+--
+ALTER TABLE `tb_petugas`
+  ADD PRIMARY KEY (`NO_URUT`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_kegiatan`
+--
+ALTER TABLE `tb_kegiatan`
+  MODIFY `id_kegiatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `tb_nilai`
+--
+ALTER TABLE `tb_nilai`
+  MODIFY `id_nilai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `tb_petugas`
+--
+ALTER TABLE `tb_petugas`
+  MODIFY `NO_URUT` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=662;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
