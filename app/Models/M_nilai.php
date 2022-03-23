@@ -15,14 +15,14 @@ class M_nilai extends Model
 
     public function getDataById_p($id){
         $query = $this->db->table('tb_nilai')->select('*')
-		->join('db_bps', 'tb_nilai.id_nilai = db_bps.No_Urut')
+		->join('tb_petugas', 'tb_nilai.id_nilai = tb_petugas.No_Urut')
         ->where('tb_nilai.id_nilai',$id)->get()->getRow();
         return $query;
     }
 
     public function getDataAdmin(){
         $query = $this->db->table('tb_nilai')->select('*')
-		->join('db_bps', 'tb_nilai.id_nilai = db_bps.No_Urut')->get()->getResult();
+		->join('tb_petugas', 'tb_nilai.id_nilai = tb_petugas.No_Urut')->get()->getResult();
         return $query;
     }
 
